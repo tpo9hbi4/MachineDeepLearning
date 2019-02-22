@@ -28,7 +28,6 @@ for name, label in [('Setosa', 0), ('Versicolour', 1), ('Virginica', 2)]:
 
 # Отрисуем точки разными цветами по трем первым признакам ирисов см. рис.2.2
 y_clr = np.choose(y, ["blue","green","red"])
-print(y_clr)
 color = ("red","green","blue")
 ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y_clr, cmap=plt.cm.spectral)
 plt.show()
@@ -43,7 +42,7 @@ X_pca = pca.fit_transform(X_centered)
 plt.plot(X_pca[y == 0, 0], X_pca[y == 0, 1], 'bo', label='Setosa')
 plt.plot(X_pca[y == 1, 0], X_pca[y == 1, 1], 'go', label='Versicolour')
 plt.plot(X_pca[y == 2, 0], X_pca[y == 2, 1], 'ro', label='Virginica')
-plt.l+nd(loc=0);
+plt.legend(loc=0);
 plt.show()
 digits = datasets.load_digits()
 X = digits.data
@@ -53,7 +52,7 @@ X = digits.data
 y = digits.target
 #Выведем матрицу с объектами и признаками рис.2.4
 print(X)
-ptiny(y)
+print(y)
 # Свернём признаковое описание в матрицу интенсивностей 8x8 и изобразим цифры
 # см. рис. 2.5
 plt.figure(figsize=(16, 6))
