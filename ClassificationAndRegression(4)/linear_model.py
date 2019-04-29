@@ -30,10 +30,10 @@ print('Coefficients: \n', regr.coef_)
 # Метрики оценки
 print("Mean squared error: %.2f"
       % mean_squared_error(diabetes_y_test, diabetes_y_pred))
-print('Variance score: %.2f' % r2_score(diabetes_y_test, dia-betes_y_pred))
+print('Variance score: %.2f' % r2_score(diabetes_y_test, diabetes_y_pred))
 # Изобразим точки и аппроксимирующую прямую (рис. 3.3)
-plt.scatter(diabetes_X_test, diabetes_y_test,  col-or='black')
-plt.plot(diabetes_X_test, diabetes_y_pred, col-or='blue', linewidth=3)
+plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
+plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
 plt.xlabel('$data$')
 plt.ylabel('$target$')
 plt.show()
